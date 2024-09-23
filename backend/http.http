@@ -1,0 +1,16 @@
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+     "title": "do something",
+     "description": "nothing"
+}
+
+###
+
+POST http://localhost:8080/createuser
+Content-Type: application/json
+
+{
+    "noe": "e"
+}
