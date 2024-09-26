@@ -3,14 +3,14 @@ import { ButtonEdit } from "../ButtonEdit"
 import { Button } from "../components/ui/button"
 import { Input } from "../components/ui/input"
 import { Trash, Trash2, Plus, Check, CheckSquare } from "lucide-react"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table"
-import { useToast } from "../hooks/use-toast"
-import { Checkbox } from "../components/ui/checkbox"
-import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card"
-import { TaskChart } from "../components/TaskChart"
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table";
+import { useToast } from "../hooks/use-toast";
+import { Checkbox } from "../components/ui/checkbox";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { TaskChart } from "../components/TaskChart";
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import axios from "axios";
-import { useUser } from "@clerk/clerk-react"
+import { useUser } from "@clerk/clerk-react";
 
 const App = () => {
   const {user}:any = useUser();
