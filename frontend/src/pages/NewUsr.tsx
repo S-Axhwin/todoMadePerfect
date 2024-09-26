@@ -12,7 +12,7 @@ const NewUsr = () => {
 
   const handleSubmit = async(e: any) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:8080/newuser', {
+    const response = await fetch('http://89.116.20.18:8080/newuser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

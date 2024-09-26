@@ -16,7 +16,7 @@ const App = () => {
   const {user}:any = useUser();
   const { toast } = useToast();
   const getTasks = async () => {
-    const response = await axios.get('http://localhost:8080/tasks', {params: {email: user.primaryEmailAddress}})
+    const response = await axios.get('http://89.116.20.18:8080/tasks', {params: {email: user.primaryEmailAddress}})
     const data = await response.data
     return data
   }
@@ -84,7 +84,7 @@ const App = () => {
   }
 
   const handleDelete = async(id: any) => {
-    const response = await fetch(`http://localhost:8080/tasks/deleteselected`, {
+    const response = await fetch(`http://89.116.20.18:8080/tasks/deleteselected`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'
@@ -97,7 +97,7 @@ const App = () => {
 
   const handleSubmit = async(e: any) => {
     e.preventDefault()
-    const response = await fetch('http://localhost:8080/tasks', {
+    const response = await fetch('http://89.116.20.18:8080/tasks', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -126,7 +126,7 @@ const App = () => {
       })
       return;
     }
-    const response = await fetch('http://localhost:8080/tasks/deleteselected', {
+    const response = await fetch('http://89.116.20.18:8080/tasks/deleteselected', {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'
@@ -147,7 +147,7 @@ const App = () => {
       })
       return;
     }
-    const response = await fetch('http://localhost:8080/task/markdone', {
+    const response = await fetch('http://89.116.20.18:8080/task/markdone', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -171,7 +171,7 @@ const App = () => {
     items.splice(result.destination.index, 0, reorderedItem);
     // dispatch({type: 'reorder', payload: items});
     if(!(result.destination.droppableId === "completedTasks")) return ;
-    const response = await fetch('http://localhost:8080/task/markdone', {
+    const response = await fetch('http://89.116.20.18:8080/task/markdone', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

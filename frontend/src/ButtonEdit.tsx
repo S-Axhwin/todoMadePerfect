@@ -21,7 +21,7 @@ export function ButtonEdit({task, dispatch}: {task: any, dispatch: any}) {
 
   const handleEdit = async() => {
     if(form.title && form.description){
-      const response = await fetch(`http://localhost:8080/tasks/${task.id}`, {
+      const response = await fetch(`http://89.116.20.18:8080/tasks/${task.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
